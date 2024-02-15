@@ -1,0 +1,10 @@
+virtualenv dltvenv
+. dltvenv/bin/activate
+pip install requirements.txt
+
+Write the Pipeline programs and to requirements
+python append_pipeline.py
+dlt pipeline append_pipeline show --> This will open a streamlit page which you can use to look at your data
+
+python merge_pipeline.py
+dlt pipeline merge_pipeline show --> This will open a streamlit page which you can use to look at your data
