@@ -1,6 +1,6 @@
 import dlt
 
-# We now use duckdb, but you can switch to Bigquery later
+#Configuring Pipeline properties
 pipeline = dlt.pipeline(pipeline_name="append_pipeline",
 						destination='duckdb', 
 						dataset_name='sample_data')
@@ -22,8 +22,8 @@ def people_2():
 for person in people_2():
     data.append(person)
     print(data)
-    #print(person)
-
+    
+#Pipeline in append mode
 info = pipeline.run(data, 
                     table_name="users", 
                     write_disposition="append")
